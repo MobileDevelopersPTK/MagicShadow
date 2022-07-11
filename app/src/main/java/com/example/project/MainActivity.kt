@@ -44,12 +44,25 @@ fun MainTopAppBar(){
         modifier = Modifier.fillMaxSize()
     ) {
         _TopAppBar.MainButtonTopAppBar(text = "Введите данные о себе")
-        Spacer(modifier = Modifier.height(25.dp))
-        _Text.Text16Regular(text = "На ваш телефон отпавлено СМС\n" +
-                "с кодом подтверждения")
-        Spacer(modifier = Modifier.height(25.dp))
-        _EditText.OutlinedTextFieldNumber("Код подтверждения")
-        _Button.MainButton(text = "Далее")
+        Column(
+            modifier = Modifier.padding(10.dp)
+        ) {
+            Spacer(modifier = Modifier.height(15.dp))
+            _EditText.OutlinedTextFieldText("Имя")
+            _EditText.OutlinedTextFieldText("Фамилия")
+            _Text.Text15Regular(text = "Необязательные", textAlign = TextAlign.Left)
+            Spacer(modifier = Modifier.height(10.dp))
+            _EditText.OutlinedTextFieldText("Ник")
+            _Button.MainButton(text = "Далее")
+        }
+        Row(Modifier.fillMaxWidth()) {
+            Checkbox(
+                checked = true,
+                onCheckedChange = {},
+            )
+            _Text.Text15Regular(text = "Скрыть имя и фамилию", TextAlign.Left)
+        }
+        Spacer(modifier = Modifier.height(20.dp))
     }
 }
 

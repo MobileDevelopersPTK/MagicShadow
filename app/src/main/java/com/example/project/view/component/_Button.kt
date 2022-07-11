@@ -23,7 +23,6 @@ object _Button {
     fun MainButton(text:String){
         Button(
             onClick = { /*TODO*/ }, modifier = Modifier
-                .padding(horizontal = 10.dp)
                 .fillMaxWidth()
                 .height(55.dp)
                 .clickable {},

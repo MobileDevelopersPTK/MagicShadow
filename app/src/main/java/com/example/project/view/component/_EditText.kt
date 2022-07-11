@@ -22,18 +22,9 @@ object _EditText {
     @Composable
     fun OutlinedTextFieldPhone(){
         val textv = remember {
-            mutableStateOf("")
+            mutableStateOf("+7")
         }
-
-
-        Box {
-            Text(
-                text = "+7",
-                modifier = Modifier
-                    .padding(start = 50.dp)
-            )
-
-            OutlinedTextField(
+        OutlinedTextField(
                 value = textv.value,
                 onValueChange = { textv.value = it },
                 textStyle = TextStyle(
@@ -47,13 +38,10 @@ object _EditText {
                 singleLine = true,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
                 modifier = Modifier
-                    .padding(horizontal = 10.dp)
                     .fillMaxWidth()
                     .padding(bottom = 15.dp)
                     .height(55.dp)
             )
-
-        }
 
     }
 
@@ -74,10 +62,9 @@ object _EditText {
                 color = Color.Black
             ),
             singleLine = true,
-            placeholder = { _Text.Text16Regular(text = text)},
+            placeholder = { _Text.Text16Regular(text = text, textAlign = TextAlign.Left)},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier
-                .padding(horizontal = 10.dp)
                 .fillMaxWidth()
                 .padding(bottom = 15.dp)
                 .height(55.dp)
@@ -89,7 +76,7 @@ object _EditText {
         val textv = remember {
             mutableStateOf("")
         }
-        androidx.compose.material.OutlinedTextField(
+        OutlinedTextField(
             value = textv.value,
             onValueChange = { textv.value = it },
             textStyle = TextStyle(
@@ -101,16 +88,14 @@ object _EditText {
                 color = Color.Black
             ),
             singleLine = true,
-            placeholder = (
-
-                    { _Text.Text16Regular(text = text)}
-                    ),
+            placeholder = {
+                    _Text.Text16Regular(text = text, textAlign = TextAlign.Left)
+            },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             modifier = Modifier
-                .padding(horizontal = 10.dp)
                 .fillMaxWidth()
                 .padding(bottom = 15.dp)
-                .height(55.dp)
+                .height(55.dp),
         )
     }
 }

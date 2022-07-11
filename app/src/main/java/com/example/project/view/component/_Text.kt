@@ -26,12 +26,24 @@ object _Text {
     }
 
     @Composable
-    fun Text16Regular(text: String){
+    fun Text16Regular(text: String, textAlign: TextAlign){
         Text(
             text = text,
             color = Color.Black,
             fontSize = 16.sp,
-            textAlign = TextAlign.Center,
+            textAlign = textAlign,
+            fontFamily = FontFamily(Font(R.font.ubuntu_regular)),
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+
+    @Composable
+    fun Text15Regular(text: String, textAlign: TextAlign){
+        Text(
+            text = text,
+            color = Color.Black,
+            fontSize = 15.sp,
+            textAlign = textAlign,
             fontFamily = FontFamily(Font(R.font.ubuntu_regular)),
             modifier = Modifier.fillMaxWidth()
         )
