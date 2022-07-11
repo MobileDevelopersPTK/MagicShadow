@@ -2,8 +2,10 @@ package com.example.project.view.component
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
+import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -40,7 +42,11 @@ object _EditText {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 15.dp)
-                    .height(55.dp)
+                    .height(55.dp),
+                colors = TextFieldDefaults.outlinedTextFieldColors(
+                    focusedBorderColor= Color.Red, // цвет при получении фокуса
+                    unfocusedBorderColor = Color.Black  // цвет при отсутствии фокуса
+                )
             )
 
     }
@@ -67,7 +73,11 @@ object _EditText {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 15.dp)
-                .height(55.dp)
+                .height(55.dp),
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                focusedBorderColor= Color.Red, // цвет при получении фокуса
+                unfocusedBorderColor = Color.Black  // цвет при отсутствии фокуса
+            )
         )
     }
 
@@ -96,6 +106,11 @@ object _EditText {
                 .fillMaxWidth()
                 .padding(bottom = 15.dp)
                 .height(55.dp),
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                focusedBorderColor= Color.Red, // цвет при получении фокуса
+                unfocusedBorderColor = Color.Black,  // цвет при отсутствии фокуса
+                cursorColor = Color.Red
+            )
         )
     }
 }
