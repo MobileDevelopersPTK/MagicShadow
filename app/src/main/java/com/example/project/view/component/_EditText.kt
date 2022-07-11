@@ -45,7 +45,8 @@ object _EditText {
                     .height(55.dp),
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     focusedBorderColor= Color.Red, // цвет при получении фокуса
-                    unfocusedBorderColor = Color.Black  // цвет при отсутствии фокуса
+                    unfocusedBorderColor = Color.Black,  // цвет при отсутствии фокуса
+                    cursorColor = Color.Red
                 )
             )
 
@@ -68,7 +69,6 @@ object _EditText {
                 color = Color.Black
             ),
             singleLine = true,
-            placeholder = { _Text.Text16Regular(text = text, textAlign = TextAlign.Left)},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier
                 .fillMaxWidth()
@@ -76,8 +76,12 @@ object _EditText {
                 .height(55.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor= Color.Red, // цвет при получении фокуса
-                unfocusedBorderColor = Color.Black  // цвет при отсутствии фокуса
-            )
+                unfocusedBorderColor = Color.Black,  // цвет при отсутствии фокуса
+                cursorColor = Color.Red
+            ),
+            label = {
+                _Text.Text16Regular(text = text, textAlign = TextAlign.Left)
+            }
         )
     }
 
@@ -98,9 +102,9 @@ object _EditText {
                 color = Color.Black
             ),
             singleLine = true,
-            placeholder = {
-                    _Text.Text16Regular(text = text, textAlign = TextAlign.Left)
-            },
+//            placeholder = {
+//                    _Text.Text16Regular(text = text, textAlign = TextAlign.Left)
+//            },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             modifier = Modifier
                 .fillMaxWidth()
@@ -110,7 +114,10 @@ object _EditText {
                 focusedBorderColor= Color.Red, // цвет при получении фокуса
                 unfocusedBorderColor = Color.Black,  // цвет при отсутствии фокуса
                 cursorColor = Color.Red
-            )
+            ),
+            label = {
+                _Text.TextLabel(text)
+            }
         )
     }
 }

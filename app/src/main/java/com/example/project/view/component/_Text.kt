@@ -52,6 +52,15 @@ object _Text {
     }
 
     @Composable
+    fun TextLabel(text: String){
+        Text(
+            text = text,
+            fontSize = 15.sp,
+            fontFamily = FontFamily(Font(R.font.ubuntu_regular))
+        )
+    }
+
+    @Composable
     fun TextCheckbox(text: String, color: Color, textDecoration: TextDecoration){
         Text(
             text = text,
