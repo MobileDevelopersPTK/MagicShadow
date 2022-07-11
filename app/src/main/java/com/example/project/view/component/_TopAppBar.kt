@@ -34,16 +34,7 @@ object _TopAppBar {
     fun MainButtonTopAppBar(text: String){
         TopAppBar(
             backgroundColor = Color.White,
-            title = {  _Text.TitleToolbar(text = text)},
-//            action = {
-//                IconButton(onClick = { /*TODO*/ }) {
-//                    Icon(
-//                        imageVector = Icons.Filled.ArrowBack,
-//                        contentDescription = "Search Icon",
-//                        tint = Color.Black
-//                    )
-//                }
-//            }
+            title = { _Text.TitleToolbar(text = text)},
             actions = {
                 IconButton(
                     enabled = false,
@@ -67,10 +58,7 @@ object _TopAppBar {
                     )
                 }
             }
-
         )
-
-
         Box(modifier = Modifier
             .fillMaxWidth()
             .height(1.dp)
