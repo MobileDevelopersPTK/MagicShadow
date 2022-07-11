@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "675283040429",
+    "project_id": "smsauth-1bfef",
+    "storage_bucket": "smsauth-1bfef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675283040429:android:0e7d9b81390fc214afee24",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675283040429-g64qip8ego7k5rvqnnr5l1dpg82brigr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXyyLnstFPuXKR9gRsZosEt_oPqxHucuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675283040429-g64qip8ego7k5rvqnnr5l1dpg82brigr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675283040429:android:a4788a8780c88933afee24",
+        "android_client_info": {
+          "package_name": "com.example.sms_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675283040429-0gk6psfrf84br53ui0t1c854em6u8oj9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sms_firebase",
+            "certificate_hash": "94dc714bf48a741f87254bf1608b0528db5b544e"
+          }
+        },
+        {
+          "client_id": "675283040429-g64qip8ego7k5rvqnnr5l1dpg82brigr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXyyLnstFPuXKR9gRsZosEt_oPqxHucuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675283040429-g64qip8ego7k5rvqnnr5l1dpg82brigr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675283040429:android:eeb22873b7ff164bafee24",
+        "android_client_info": {
+          "package_name": "com.example.smsfirebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675283040429-9c3g0t37k29hc233kcglqbgrktm1dldj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smsfirebaseauth",
+            "certificate_hash": "56effbb1ee303f5eb6a8264068875af5dd46de08"
+          }
+        },
+        {
+          "client_id": "675283040429-g64qip8ego7k5rvqnnr5l1dpg82brigr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXyyLnstFPuXKR9gRsZosEt_oPqxHucuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675283040429-g64qip8ego7k5rvqnnr5l1dpg82brigr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
