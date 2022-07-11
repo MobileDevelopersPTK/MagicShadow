@@ -1,9 +1,6 @@
 package com.example.project.view.screens.signInUp
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -18,9 +15,13 @@ object InputNumberScreen {
             modifier = Modifier.fillMaxSize()
         ) {
             _TopAppBar.MainTopAppBar(text = "Введите телефон")
-            Spacer(modifier = Modifier.height(20.dp))
-            _EditText.OutlinedTextFieldPhone()
-            _Button.MainButton(text = "Далее")
+            Column(
+                modifier = Modifier.padding(10.dp)
+            ){
+                Spacer(modifier = Modifier.height(20.dp))
+                _EditText.OutlinedTextFieldPhone()
+                _Button.MainButton(text = "Далее")
+            }
         }
     }
 }
