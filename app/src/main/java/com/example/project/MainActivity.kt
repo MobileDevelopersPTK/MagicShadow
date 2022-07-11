@@ -45,7 +45,6 @@ fun MainTopAppBar(){
     ) {
         _TopAppBar.MainButtonTopAppBar(text = "Введите данные о себе")
         Spacer(modifier = Modifier.height(25.dp))
-        _EditText.OutlinedTextFieldPhone()
         _Text.Text16Regular(text = "На ваш телефон отпавлено СМС\n" +
                 "с кодом подтверждения")
         Spacer(modifier = Modifier.height(25.dp))
