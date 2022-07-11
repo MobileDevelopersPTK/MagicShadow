@@ -1,9 +1,9 @@
 package com.example.project.view.component
 
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -22,9 +22,47 @@ object _EditText {
     @Composable
     fun OutlinedTextFieldPhone(){
         val textv = remember {
-            mutableStateOf("+7")
+            mutableStateOf("")
         }
-        androidx.compose.material.OutlinedTextField(
+
+
+        Box {
+            Text(
+                text = "+7",
+                modifier = Modifier
+                    .padding(start = 50.dp)
+            )
+
+            OutlinedTextField(
+                value = textv.value,
+                onValueChange = { textv.value = it },
+                textStyle = TextStyle(
+                    fontFamily = FontFamily(
+                        Font(R.font.ubuntu_regular)
+                    ),
+                    textAlign = TextAlign.Left,
+                    fontSize = 16.sp,
+                    color = Color.Black
+                ),
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
+                modifier = Modifier
+                    .padding(horizontal = 10.dp)
+                    .fillMaxWidth()
+                    .padding(bottom = 15.dp)
+                    .height(55.dp)
+            )
+
+        }
+
+    }
+
+    @Composable
+    fun OutlinedTextFieldNumber(text: String){
+        val textv = remember {
+            mutableStateOf("")
+        }
+        OutlinedTextField(
             value = textv.value,
             onValueChange = { textv.value = it },
             textStyle = TextStyle(
@@ -36,7 +74,8 @@ object _EditText {
                 color = Color.Black
             ),
             singleLine = true,
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
+            placeholder = { _Text.Text16Regular(text = text)},
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier
                 .padding(horizontal = 10.dp)
                 .fillMaxWidth()
@@ -46,7 +85,7 @@ object _EditText {
     }
 
     @Composable
-    fun OutlinedTextFieldNumber(text: String){
+    fun OutlinedTextFieldText(text: String){
         val textv = remember {
             mutableStateOf("")
         }
@@ -62,8 +101,11 @@ object _EditText {
                 color = Color.Black
             ),
             singleLine = true,
-            placeholder = { _Text.Text16Regular(text = text)},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            placeholder = (
+
+                    { _Text.Text16Regular(text = text)}
+                    ),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             modifier = Modifier
                 .padding(horizontal = 10.dp)
                 .fillMaxWidth()

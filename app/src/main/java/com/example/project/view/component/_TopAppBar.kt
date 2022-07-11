@@ -32,16 +32,45 @@ object _TopAppBar {
 
     @Composable
     fun MainButtonTopAppBar(text: String){
-        TopAppBar(backgroundColor = Color.White, modifier = Modifier.padding(end = 25.dp)){
-            IconButton(onClick = { /*TODO*/ }) {
-                Icon(
-                    imageVector = Icons.Filled.ArrowBack,
-                    contentDescription = "Search Icon",
-                    tint = Color.Black
-                )
+        TopAppBar(
+            backgroundColor = Color.White,
+            title = {  _Text.TitleToolbar(text = text)},
+//            action = {
+//                IconButton(onClick = { /*TODO*/ }) {
+//                    Icon(
+//                        imageVector = Icons.Filled.ArrowBack,
+//                        contentDescription = "Search Icon",
+//                        tint = Color.Black
+//                    )
+//                }
+//            }
+            actions = {
+                IconButton(
+                    enabled = false,
+                    onClick = {}
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.ArrowBack,
+                        contentDescription = "Search Icon",
+                        tint = Color.White
+                    )
+                }
+            },
+            navigationIcon = {
+                IconButton(
+                    onClick = {}
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.ArrowBack,
+                        contentDescription = "Back Icon",
+                        tint = Color.Black
+                    )
+                }
             }
-            _Text.TitleToolbar(text = text)
-        }
+
+        )
+
+
         Box(modifier = Modifier
             .fillMaxWidth()
             .height(1.dp)

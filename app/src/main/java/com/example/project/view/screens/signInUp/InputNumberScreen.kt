@@ -23,5 +23,4 @@ object InputNumberScreen {
             _Button.MainButton(text = "Далее")
         }
     }
-
 }
