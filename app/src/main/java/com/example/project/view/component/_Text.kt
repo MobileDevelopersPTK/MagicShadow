@@ -56,7 +56,7 @@ object _Text {
         Text(
             text = text,
             fontSize = 15.sp,
-            fontFamily = FontFamily(Font(R.font.ubuntu_regular))
+            fontFamily = FontFamily(Font(R.font.ubuntu_regular)),
         )
     }
 

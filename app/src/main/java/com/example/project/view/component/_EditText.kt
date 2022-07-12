@@ -46,7 +46,9 @@ object _EditText {
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     focusedBorderColor= Color.Red, // цвет при получении фокуса
                     unfocusedBorderColor = Color.Black,  // цвет при отсутствии фокуса
-                    cursorColor = Color.Red
+                    cursorColor = Color.Red,
+                    focusedLabelColor = Color.Red,
+                    unfocusedLabelColor = Color.Black
                 )
             )
 
@@ -77,10 +79,12 @@ object _EditText {
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor= Color.Red, // цвет при получении фокуса
                 unfocusedBorderColor = Color.Black,  // цвет при отсутствии фокуса
-                cursorColor = Color.Red
+                cursorColor = Color.Red,
+                focusedLabelColor = Color.Red,
+                unfocusedLabelColor = Color.Black
             ),
             label = {
-                _Text.Text16Regular(text = text, textAlign = TextAlign.Left)
+                _Text.TextLabel(text = text)
             }
         )
     }
@@ -113,7 +117,9 @@ object _EditText {
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor= Color.Red, // цвет при получении фокуса
                 unfocusedBorderColor = Color.Black,  // цвет при отсутствии фокуса
-                cursorColor = Color.Red
+                cursorColor = Color.Red,
+                focusedLabelColor = Color.Red,
+                unfocusedLabelColor = Color.Black
             ),
             label = {
                 _Text.TextLabel(text)

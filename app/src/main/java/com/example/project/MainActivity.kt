@@ -28,6 +28,7 @@ import com.example.project.view.component._Button
 import com.example.project.view.component._EditText
 import com.example.project.view.component._Text
 import com.example.project.view.component._TopAppBar
+import com.example.project.view.screens.signInUp.ConfirmCodeScreen
 import com.example.project.view.screens.signInUp.InputNumberScreen
 import com.example.project.view.screens.signInUp.UserDetailsScreen
 import com.example.project.view.theme.ProjectTheme
@@ -43,7 +44,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainTopAppBar(){
-    InputNumberScreen.Show()
+    ConfirmCodeScreen.Show()
 }
 
 @Preview(showBackground = true)
